@@ -1,43 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A simple Hello World webpage." />
-  <title>Hello World</title>
-  <style>
-    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; color: #f8fafc; background: #0b1020; overflow: hidden; }
-    .orb { position: fixed; width: 32rem; height: 32rem; border-radius: 50%; filter: blur(80px); opacity: .28; pointer-events: none; }
-    .orb.one { background: #7c3aed; top: -12rem; left: -8rem; }
-    .orb.two { background: #06b6d4; right: -10rem; bottom: -14rem; }
-    main { position: relative; display: grid; place-items: center; min-height: 100vh; padding: 2rem; }
-    .card { width: min(100%, 720px); padding: clamp(2rem, 7vw, 5rem); text-align: center; border: 1px solid rgba(255,255,255,.14); border-radius: 32px; background: rgba(15, 23, 42, .68); box-shadow: 0 30px 100px rgba(0,0,0,.32); backdrop-filter: blur(18px); }
-    .eyebrow { margin: 0 0 1.25rem; color: #67e8f9; font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
-    h1 { margin: 0; font-size: clamp(3.2rem, 11vw, 7.5rem); line-height: .95; letter-spacing: -.07em; background: linear-gradient(110deg, #fff 20%, #a5f3fc 55%, #c4b5fd 85%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    p { max-width: 34rem; margin: 1.75rem auto 0; color: #cbd5e1; font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.7; }
-    .button { display: inline-flex; align-items: center; gap: .6rem; margin-top: 2.25rem; padding: .9rem 1.2rem; border: 0; border-radius: 999px; color: #082f49; background: #a5f3fc; font-weight: 800; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
-    .button:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(103,232,249,.25); }
-    .note { min-height: 1.5em; margin-top: 1rem; color: #67e8f9; font-size: .9rem; }
-  </style>
-</head>
-<body>
-  <div class="orb one"></div><div class="orb two"></div>
-  <main>
-    <section class="card" aria-labelledby="title">
-      <p class="eyebrow">A tiny beginning</p>
-      <h1 id="title">Hello world.</h1>
-      <p>Sometimes the simplest page is the perfect place to start. Welcome to the web.</p>
-      <button class="button" id="helloButton" type="button">Say hello <span aria-hidden="true">→</span></button>
-      <div class="note" id="note" aria-live="polite"></div>
-    </section>
-  </main>
-  <script>
-    document.getElementById('helloButton').addEventListener('click', () => {
-      document.getElementById('note').textContent = 'Hello right back 👋';
-    });
-  </script>
-</body>
-</html>
+<!doctype html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>부서 실적 대시보드</title><style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#172033;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}.top{background:linear-gradient(120deg,#102a43,#147d92);color:#fff;padding:30px 5vw 42px}.top h1{margin:0;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.05em}.top p{margin:10px 0 0;color:#cceef1}.wrap{max-width:1200px;margin:-24px auto 0;padding:0 20px 48px}.panel{background:#fff;border:1px solid #e2e8f0;border-radius:18px;box-shadow:0 16px 40px #17203312;padding:22px}.controls{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.controls label{font-size:.8rem;font-weight:800;color:#607086;text-transform:uppercase;letter-spacing:.08em}.select{border:1px solid #cbd5e1;border-radius:10px;padding:11px 36px 11px 13px;background:#fff;color:#172033;font-size:1rem;font-weight:700}.meta{margin-left:auto;color:#64748b;font-size:.9rem}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}.card{padding:18px;border-radius:14px;background:#f8fafc;border:1px solid #e7edf4}.card small{display:block;color:#64748b;font-weight:700}.card strong{display:block;margin-top:7px;font-size:1.5rem;letter-spacing:-.04em}.card.accent{background:#e8f8f8;border-color:#bde8e6}.card.accent strong{color:#087f8c}.table-wrap{margin-top:22px;overflow:auto}.table-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:12px}.table-title h2{font-size:1.1rem;margin:0}.table-title span{color:#64748b;font-size:.85rem}table{width:100%;border-collapse:collapse;min-width:760px}th,td{padding:13px 12px;border-bottom:1px solid #edf1f5;text-align:right;white-space:nowrap}th{background:#f8fafc;color:#607086;font-size:.8rem}th:first-child,td:first-child{text-align:left}td:first-child{font-weight:700}.total{font-weight:800;color:#087f8c}.negative{color:#d14343}.foot{margin-top:14px;font-size:.82rem;color:#8391a5}@media(max-width:760px){.cards{grid-template-columns:repeat(2,1fr)}.meta{width:100%;margin-left:0}}@media(max-width:430px){.card strong{font-size:1.15rem}}
+</style></head><body><header class="top"><h1>부서 실적 대시보드</h1><p>도로부 · 공항및인프라사업부 | 최근 실적을 한눈에 확인하세요</p></header><main class="wrap"><section class="panel"><div class="controls"><label for="dept">부서 선택</label><select id="dept" class="select"><option value="road">도로부</option><option value="airport">공항및인프라사업부</option></select><div class="meta">단위: 백만원 · 2026년은 8월말 기준</div></div><div class="cards" id="cards"></div><div class="table-wrap"><div class="table-title"><h2>연도별 주요 실적</h2><span>합계와 최근 3년 평균 포함</span></div><table><thead><tr><th>항목</th><th>2023</th><th>2024</th><th>2025</th><th>2026.8월말</th><th>합계</th><th>년평균<br>(최근 3년)</th></tr></thead><tbody id="rows"></tbody></table></div><div class="foot">* 2026년 수치는 당해연도 8월말 누계입니다. 년평균은 2023~2025년 기준입니다.</div></section></main><script>
+const data={road:{rows:[["수주",13067,14020,12452,4743,44283],["수금",15108,14203,11687,5613,46610],["직접인건비",2221,2194,2339,1590,8344],["간접인건비",1336,1407,1410,576,4728],["직접제경비",2093,1165,1502,929,5689],["간접제경비",604,472,448,133,1658],["외주비",5729,4398,6188,2121,18436],["판관비",1221,980,1240,712,4154],["비용",13204,10617,13127,6061,43009],["실행원가 계",0,11983,9637,11886,38855],["수금(외주제외)",9378,9804,5499,3492,28174],["비용(외주제외)",7475,6219,6939,3940,24573],["[수금 - 비용]",1904,3585,-1440,-448,3601],["실행율(판관제외)",79,68,102,95,83,"%"],["원가율(판관포함)",87,75,112,108,92,"%"],["인당 [수금 - 비용]",44,78,-33,-16,21.4]]},airport:{rows:[["수주",2497,2008,2308,17,6830],["수금",2250,1263,1131,652,5297],["직접인건비",600,545,272,177,1593],["간접인건비",372,357,529,358,1616],["직접제경비",138,149,99,171,557],["간접제경비",108,88,156,44,396],["외주비",902,423,115,142,1581],["판관비",279,199,160,142,779],["비용",2399,1759,1330,1034,6523],["실행원가 계",0,2121,1561,1171,5744],["수금(외주제외)",1349,841,1016,510,3715],["비용(외주제외)",1498,1337,1216,892,4942],["[수금 - 비용]",-149,-496,-199,-382,-1226],["실행율(판관제외)",94,124,104,137,108,"%"],["원가율(판관포함)",107,139,118,159,123,"%"],["인당 [수금 - 비용]",-17,-45,-22,-57,-33.3]]}};
+const fmt=(n,s="")=>Number(n).toLocaleString("ko-KR")+s;function render(){const d=data[dept.value].rows,get=k=>d.find(r=>r[0]===k),net=get("[수금 - 비용]"),cards=[["수주 합계",get("수주")[5]],["수금 합계",get("수금")[5]],["수금-비용 합계",net[5]],["수금-비용 년평균",net[5]/3]];cardsEl.innerHTML=cards.map((c,i)=>`<div class="card ${i===2?"accent":""}"><small>${c[0]}</small><strong class="${c[1]<0?"negative":""}">${fmt(c[1])}</strong></div>`).join("");rows.innerHTML=d.map(r=>{let s=r[6]==="%"?"%":"";return `<tr><td>${r[0]}</td>${r.slice(1,6).map(v=>`<td class="${v<0?"negative":""}">${fmt(v,s)}</td>`).join("")}<td class="total">${fmt(r[5]/3,s)}</td></tr>`}).join("")}const dept=document.getElementById("dept"),cardsEl=document.getElementById("cards"),rows=document.getElementById("rows");dept.addEventListener("change",render);render();
+</script></body></html>
 
